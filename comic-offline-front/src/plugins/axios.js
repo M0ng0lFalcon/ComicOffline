@@ -8,10 +8,13 @@ import axios from "axios";
 // axios.defaults.headers.common['Authorization'] = AUTH_TOKEN;
 // axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
 
+const HOST = "http://127.0.0.1";
+const PORT = "8081";
+const SUFFIX = "/api/v1";
+const BASE_URL = HOST + ":" + PORT + SUFFIX;
 let config = {
-  // baseURL: process.env.baseURL || process.env.apiUrl || ""
-  // timeout: 60 * 1000, // Timeout
-  // withCredentials: true, // Check cross-site Access-Control
+  baseURL: BASE_URL, // Base URL
+  timeout: 60 * 1000, // Timeout
 };
 
 const _axios = axios.create(config);

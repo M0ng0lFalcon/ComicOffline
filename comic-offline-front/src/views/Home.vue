@@ -1,12 +1,25 @@
 <template>
   <div class="home">
-    <h1>this is home</h1>
+    <b-list-group>
+      <b-list-group-item button>咒术回战</b-list-group-item>
+      <b-list-group-item button>咒术回战</b-list-group-item>
+    </b-list-group>
+    <b-button @click="GetComicNames">test</b-button>
   </div>
 </template>
 
 <script>
+import GetComicNames from "../Server/ComicServer.js";
+
 export default {
   name: "Home",
-  components: {},
+  date() {
+    return {};
+  },
+  methods: {
+    GetComicNames() {
+      GetComicNames();
+    },
+  },
 };
 </script>
