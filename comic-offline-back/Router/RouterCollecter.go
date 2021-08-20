@@ -12,7 +12,8 @@ func CollectRoute(r *gin.Engine) *gin.Engine {
 	// Apis
 	v1 := r.Group("/api/v1")
 	{
-		GetFileRouter(v1)
+		GetComicRouter(v1)
+		GetStaticFileRouter(v1)
 	}
 
 	return r

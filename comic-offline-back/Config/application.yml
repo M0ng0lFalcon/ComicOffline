@@ -1,2 +1,4 @@
 server:
   port: 8081
+comic:
+  root: Resources/comic_books
