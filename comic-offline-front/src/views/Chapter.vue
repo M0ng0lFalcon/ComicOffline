@@ -7,7 +7,12 @@
       text-variant="white"
     >
       <b-list-group flush v-for="name in chapters" :key="name">
-        <b-list-group-item variant="dark">
+        <b-list-group-item
+          :to="{
+            name: 'ChapterPage',
+            params: { comicName: $route.params.comicName, chapter: name },
+          }"
+        >
           {{ name }}
         </b-list-group-item>
       </b-list-group>
@@ -28,7 +33,6 @@ export default {
   async mounted() {
     const comicName = this.$route.params.comicName;
     this.chapters = await GetComicChapters(comicName);
-    console.log(this.chapters);
   },
 };
 </script>

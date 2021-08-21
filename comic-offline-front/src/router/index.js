@@ -20,6 +20,11 @@ const routes = [
     name: "Chapter",
     component: () => import("../views/Chapter.vue"),
   },
+  {
+    path: "/chapterPage/:comicName/:chapter",
+    name: "ChapterPage",
+    component: () => import("../views/ChapterPage.vue"),
+  },
 ];
 
 const router = new VueRouter({
