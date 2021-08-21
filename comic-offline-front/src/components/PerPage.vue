@@ -1,6 +1,6 @@
 <template>
   <div class="perPage">
-    <b-img :src="pageUrls[pageNum - 1]" center></b-img>
+    <b-img :src="pageUrls[pageNum - 1]" center fluid></b-img>
   </div>
 </template>
 
@@ -16,3 +16,9 @@ export default {
   },
 };
 </script>
+
+<style>
+.perPage {
+  cursor: pointer;
+}
+</style>

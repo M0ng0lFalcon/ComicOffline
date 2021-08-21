@@ -9,11 +9,13 @@
       pills
     ></b-pagination>
 
-    <per-page
-      id="page"
-      :pageNum="pageNum"
-      :pageUrls="pagesInfo.pageUrls"
-    ></per-page>
+    <b-card @click="nextPage">
+      <per-page
+        id="page"
+        :pageNum="pageNum"
+        :pageUrls="pagesInfo.pageUrls"
+      ></per-page>
+    </b-card>
 
     <b-pagination
       v-model="pageNum"
@@ -44,6 +46,11 @@ export default {
       perPage: 1,
       pageNum: 1,
     };
+  },
+  methods: {
+    nextPage() {
+      this.pageNum += 1;
+    },
   },
   async mounted() {
     const comicName = this.$route.params.comicName;
