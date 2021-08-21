@@ -2,7 +2,12 @@
   <div class="home">
     <b-card no-body header="Comic Names" bg-variant="dark" text-variant="white">
       <b-list-group flush v-for="name in comicNames" :key="name">
-        <b-list-group-item button variant="dark">{{ name }}</b-list-group-item>
+        <b-list-group-item
+          variant="dark"
+          :to="{ name: 'Chapter', params: { comicName: name } }"
+        >
+          {{ name }}
+        </b-list-group-item>
       </b-list-group>
     </b-card>
   </div>
