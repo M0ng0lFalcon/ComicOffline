@@ -8,7 +8,7 @@ import axios from "axios";
 // axios.defaults.headers.common['Authorization'] = AUTH_TOKEN;
 // axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
 
-const HOST = "http://127.0.0.1";
+const HOST = "http://192.168.10.57";
 const PORT = "8081";
 const SUFFIX = "/api/v1";
 const BASE_URL = HOST + ":" + PORT + SUFFIX;
